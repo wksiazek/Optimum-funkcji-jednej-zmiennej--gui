@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>628</width>
+    <height>529</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Optimum jednej zmiennej</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>12</y>
+      <width>606</width>
+      <height>375</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_7">
+     <item>
+      <widget class="QLabel" name="labelWelcome">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Program obliczający optimum funkcji jednej zmiennej rzeczywistej&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_17">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="labelPopulationSize">
+               <property name="text">
+                <string>Wielkość populacji:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxPopulationSize"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="labelNumberGeneration">
+               <property name="text">
+                <string>Ilość iteracji:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxNumberGeneration"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="labelProbabilityCrossover">
+               <property name="text">
+                <string>Prawdopodobieństwo krzyżowania:[%]</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxProbabilityCrossover"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLabel" name="labelProbabilityMutation">
+               <property name="text">
+                <string>Prawdopodobieństwo mutacji:[%]</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxProbabilityMutation"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLabel" name="labelProbabilityInversion">
+               <property name="text">
+                <string>Prawdopodobieństwo inwersji:[%]</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxProbabilityInversion"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="labelPercentElite">
+               <property name="text">
+                <string>Elitaryzm:[%]</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxPercentElite"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_21">
+             <item>
+              <widget class="QLabel" name="NumberBits">
+               <property name="text">
+                <string>Ilość bitów na chromosom:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxNumberBits"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLabel" name="labelOptimization">
+               <property name="text">
+                <string>Wybór optimum:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxOptimization">
+               <item>
+                <property name="text">
+                 <string>Maksimum</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Minimum</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <widget class="QLabel" name="labeCrossoverAlgorithm">
+               <property name="text">
+                <string>Algorytm krzyżowania: </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxCrossoverAlgorithm">
+               <item>
+                <property name="text">
+                 <string>Krzyżowanie jednopunktowe</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Krzyżowanie dwupunktowe</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Krzyżowanie trzypunktowe</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QLabel" name="labelSelectionAlgorithm">
+               <property name="text">
+                <string>Algorytm selekcji:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxSelectionAlgorithm">
+               <item>
+                <property name="text">
+                 <string>Koło ruletki</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Selekcja turniejowa</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Selekcja rangowa</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Selekcja najlepsi</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QLabel" name="labelMutationAlgorithm">
+               <property name="text">
+                <string>Algorytm mutacji:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxMutationAlgorithm">
+               <item>
+                <property name="text">
+                 <string>Mutacja jednopunktowa</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Mutacja dwupunktowa</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Mutacja trzypunktowa</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <item>
+              <widget class="QLabel" name="labelUniqueIndyvidual">
+               <property name="text">
+                <string>Unikalność potomków:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxUniqueIndyvidual">
+               <item>
+                <property name="text">
+                 <string>Tak</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Nie</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_15">
+             <item>
+              <widget class="QLabel" name="labelTournamentSize">
+               <property name="text">
+                <string>Wielkość turnieju w selekcji turniejowej:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxTournamentSize"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <widget class="QLabel" name="labelPercentTheBestSelection">
+               <property name="text">
+                <string>Najlepszych w selekcji najlepszych:[%]</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxPercentTheBestSelection"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QLabel" name="labelTypeScaled">
+               <property name="text">
+                <string>Rodzaj skalowania funkcji celu:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxTypeScaled">
+               <item>
+                <property name="text">
+                 <string>Skalowanie liniowe</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Skalowanie potęgowe</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Skalowanie obcinające typu sigma</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_18">
+               <item>
+                <widget class="QLabel" name="labelLeftBoundary">
+                 <property name="text">
+                  <string>Lewy kraniec przedziału funkcji:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <item>
+                  <widget class="QDoubleSpinBox" name="doubleSpinBoxLeftBoundary"/>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="labelRightBoundary">
+                   <property name="text">
+                    <string>Prawy kraniec przedziału funkcji:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="doubleSpinBoxRightBoundary"/>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                 <item>
+                  <widget class="QLabel" name="labelTypeFunction">
+                   <property name="text">
+                    <string>Wybór funkcji:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBoxTypeFunction">
+                   <item>
+                    <property name="text">
+                     <string>Funkcja1</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Funkcja2</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Funkcja3</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Funkcja4</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Funkcja5</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Funkcja6</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Funkcja7</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Funkcja8</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Funkcja9</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Funkcja10</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Funkcja11</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_19">
+               <item>
+                <widget class="QPushButton" name="pushButtonTheBestInIteration">
+                 <property name="text">
+                  <string>Najlepsze wyniki z każdej iteracji</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButtonTheWorstInIteration">
+                 <property name="text">
+                  <string>Najgorsze wyniki z każdej iteracji</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonStart">
+             <property name="text">
+              <string>Start</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_20">
+           <item>
+            <widget class="QLabel" name="labelResultX">
+             <property name="text">
+              <string>Wynik z ostatniej iteracji</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>x:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEditX"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelResultFitness">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;f(x):&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEditFitness"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>601</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_22">
+     <item>
+      <widget class="QLabel" name="labelFunctionAndRange">
+       <property name="text">
+        <string>Wzór funkcji i sugerowany przedział:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelFunction">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;TextLabel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_26">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>460</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Czas obliczeń:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelAuthor">
+    <property name="geometry">
+     <rect>
+      <x>252</x>
+      <y>481</y>
+      <width>115</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Autor: Wojciech Książek&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <zorder>label_26</zorder>
+   <zorder>labelAuthor</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
